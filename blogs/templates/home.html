@@ -1,0 +1,55 @@
+{%extends 'base.html' %}
+
+{%block title%}
+welcome to blogs
+{%endblock%}
+
+{%block content%}
+
+<div class="container">
+    <!-- Set up your HTML -->
+    <div class="owl-carousel">
+        
+    {%for c in cats %}
+   
+      <div class="card">
+        
+        <div class="img-container" style="padding-left: 5%">
+            <img src="/media/{{c.image}}" style="width: 200px; height:200px" class="responsive-img" alt="">
+        </div>
+        <a href="/category_post/{{c.url}}">
+        <div class="card-title" style="background:rgb(139, 233, 139); color:white;padding: 5% 10%">
+            <b> {{c.title}}</b>
+               <p class="truncate" style="color:rgb(21, 23, 23)">{{c.description}}</p>
+        </div>
+        </a>
+      </div>
+     
+    {%endfor%}
+    </div>
+
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            
+            {%for p in posts %}
+            <div class="row" style="border-top:2px solid black;padding: 2px; height:auto">
+                <div class="col s6 m8">
+                    <h3>{{p.title}}</h3>
+            {{p.content | truncatewords:60 | safe}}
+          
+            <a href="/blogs/{{p.url}}" class="btn">Read more..</a>
+           
+             </div>
+           <div class="col s6 m4" >
+            <img src="/media/{{p.image}}" style="height:50%" class="responsive-img">
+           </div>
+
+            </div>
+            {%endfor %}
+        </div>
+    </div>
+</div>
+
+{%endblock%}

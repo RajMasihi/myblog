@@ -1,0 +1,39 @@
+{%extends 'base.html' %}
+
+{%block title%}
+{{cat.title}}
+{%endblock%}
+
+{%block content%}
+<div class="container">
+    <div class="row" style="padding:20px">
+        <div class="col s8" style="height:100%">
+            
+            <img src="/media/{{cat.image}}" style="width:50%; height:50%" class="responsive-img" alt="">
+        
+            <p>><b>{{cat.title}}</b></p>
+            {{cat.description}}
+        </div>
+        <div class="col s4">
+            <div class="heading" style="background:black; color:white;padding:2%; text-align: center"><p>Click any post</p></div>
+            <div style="height: 1000px; overflow-x: scroll">
+            {%for p in posts %}
+            <a href="/blogs/{{p.url}}">
+            <div class="card">
+              <div class="img-container">
+                  <img src="/media/{{p.image}}" style="width: 200px; height:200px" class="responsive-img" alt="{{p.title}}">
+              </div>
+              <div class="card-title" style="background:rgb(126, 240, 126); color:white;padding: 5% 10%">
+                      <b>{{p.title}}</b>
+              </div>
+            </div>
+            </a>
+          {%endfor%}
+            </div>
+        </div>
+         </div>
+    </div>
+    
+       
+</div>
+{%endblock%}

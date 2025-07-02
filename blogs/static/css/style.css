@@ -1,0 +1,9 @@
+.bg-primary{
+    background: blue !important;
+    scroll-behavior:pinned;
+}
+.heading{
+    background:black; 
+    color:white;
+     padding-left:5%;
+}

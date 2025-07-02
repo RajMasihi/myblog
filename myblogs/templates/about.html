@@ -1,0 +1,84 @@
+{% extends "master.html" %}
+{% block content %}
+    <html>
+    <head>
+        {% load static %}
+
+<link href="{% static "css/aos.css" %}" rel="stylesheet">
+<link href="{% static "css/style.css" %}" rel="stylesheet">
+<link href="{% static "assets/vendor/icofont/icofont.min.css" %}" rel="stylesheet">
+    </head>
+    <body>
+    <div class="container-fluid">
+        <div class="row" style="min-height: 100px;background: black">
+         <div class="col-md-3" style="padding-top: 7.5px;padding-left: 40px;background: black;min-height: 100px">
+             <img src="{% static "images/19.png" %}" height="65px" width="260px">
+         </div>
+            <div class="col-md-6" style="background:black;min-height: 100px;font-size: 45px;color: white;padding-top: 10px;text-shadow:4px 6px 6px whitesmoke"><marquee scrollamount="10" behavior="alternate">About Us...</marquee></div>
+
+            </div>
+    </div>
+
+    <section id="About" class="about">
+    <div class="container" data-aos="fade-up">
+        <div class="section-title">
+            <h2>Materials</h2>
+            <p>About Us</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+                <img src="{% static "images/20.jpg" %}" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-lg-1 content">
+                <h3>Online Courses Portal offer an ever growing range of high quality and informative online courses.</h3>
+                <p class="font-weight-bolder">
+                  Online Courses Portal wants to make it possible that each student can learn courses easily without any difficulty.
+        You can gain clear and absolutely correct information from our courses. You will happy to learn.
+                </p>
+                <ul>
+                    <li><i class="icofont-check-circlede"></i>We enable them to explore all their study options in one
+        place and to find the best fit study</li>
+                    <li><i class="icofont-check-circled"></i>School of Business is organizing
+a workshop on Financial Empowerment
+Through Wealth Creation on 8th April 2022..</li>
+                    <li><i class="icofont-check-circled"></i> School of Medical & Allied Sciences
+organized Health Awareness
+Program ..ReadMore.Online Courses Portal offer an ever growing range of high quality and informative online courses.</li>
+                </ul>
+                <p>
+                    Online education is a procedure of gaining skills and knowledge through electronic devices like computers,
+                    mobiles, laptops, etc using the internet. Online education makes it possible for tutors or mentors to reach all
+                    the students more flexibly and teach them the relevant skills more efficiently.
+                </p>
+                <a href="#" class="learn-more-btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="counts" class="counts section-bg">
+    <div class="container">
+        <div class="row counters">
+            <div class="col-lg-3 col-6 text-center">
+                <span data-toggle="counter-up">4421</span>
+                <p>Student</p>
+            </div>
+            <div class="col-lg-3 col-6 text-center">
+                <span data-toggle="counter-up">44</span>
+                <p>Courses</p>
+            </div>
+            <div class="col-lg-3 col-6 text-center">
+                <span data-toggle="counter-up">36</span>
+                <p>Event</p>
+            </div>
+            <div class="col-lg-3 col-6 text-center">
+                <span data-toggle="counter-up">11</span>
+                <p>Teacher's</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </body>
+    </html>
+{% endblock content %}
